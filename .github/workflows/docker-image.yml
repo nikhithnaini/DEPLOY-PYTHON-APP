@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag hello-world
     - name: Log in docker hub
-      run : docker login -u ${{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_PASS}}
+      run : docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASS}}
