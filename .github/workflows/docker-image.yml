@@ -29,7 +29,7 @@ jobs:
        username: ubuntu # The SSH username for your EC2 instance
        key: ${{ secrets.KEY_PAIR }}  # Your SSH private key (stored as a secret)
        script: |
-          docker stop $9docker ps -aq)
+          docker stop $(docker ps -aq)
           docker rm $(docker ps -aq)
           docker rmi $(docker images -q)
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/app-flask
