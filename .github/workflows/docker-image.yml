@@ -16,3 +16,5 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag hello-world
+    - name: Log in docker hub
+      run : docker login -u ${{secrets.DOCKER_USER}} -p ${{secret.DOCKER_PASS}}
